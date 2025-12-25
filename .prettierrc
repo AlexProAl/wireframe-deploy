@@ -1,0 +1,31 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "printWidth": 100,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "jsxSingleQuote": false,
+  "bracketSameLine": false,
+  "singleAttributePerLine": true,
+  "endOfLine": "lf",
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/app/global.css",
+  "tailwindFunctions": ["clsx", "cn", "cva"],
+  "importOrder": [
+    "^(type:)?@/types/(?!enums)(.*)$",
+    "^@/types/enums/(.*)$",
+    "^react$",
+    "^next/(.*)$",
+    "^@/data/(.*)$",
+    "^@/lib/utils$",
+    "^@/utils/(.*)$",
+    "^[a-zA-Z0-9@](.*)$",
+    "^@/components/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
+}
