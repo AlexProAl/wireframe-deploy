@@ -1,6 +1,8 @@
 import { Geist } from 'next/font/google'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
+import { GlobalModal } from '@/components/modal/global-modal'
+import { ModalProvider } from '@/components/modal/modal-context'
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -22,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${geistSans.variable} antialiased`}>
-        <Header />
+        <ModalProvider>
+          <Header />
 
-        <main className="grow">{children}</main>
-
-        <Footer />
+          <main className="grow">{children}</main>
+          <GlobalModal />
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   )

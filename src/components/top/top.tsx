@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useModal } from '@/components/modal/modal-context'
 
 export default function HeroSection() {
+  const { openModal } = useModal()
   const companies = [
     { src: '/images/company1.png', alt: 'FeatherDev', width: 134, height: 134 },
     { src: '/images/company2.png', alt: 'Acme Corp', width: 110, height: 110 },
@@ -86,12 +88,12 @@ export default function HeroSection() {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-          <a
-            href="www"
-            className="hadow-[inset_0_0_4px_2px_rgba(255,255,255,0.28),_0_0_8px_1px_rgba(36,101,255,0.4)] rounded-full bg-primary px-6 py-3 font-semibold shadow-lg transition hover:bg-tertiary"
+          <button
+            onClick={openModal}
+            className="relative cursor-pointer rounded-full bg-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-blue-700"
           >
             Написать нам
-          </a>
+          </button>
           <a
             href="#solution"
             className="border-gray-300 hover:bg-gray-100 rounded-full border bg-white px-6 py-3 font-semibold transition"
@@ -101,8 +103,8 @@ export default function HeroSection() {
         </div>
 
         {/* Companies logos */}
-        <div className="relative overflow-hidden py-8">
-          <div className="relative overflow-hidden">
+        <div className="relative min-h-[140px] overflow-hidden py-8">
+          <div className="relative min-h-[140px] max-w-[800px] overflow-hidden">
             <div className="animate-marquee flex gap-6">
               {companies.concat(companies).map((company, idx) => (
                 <div
