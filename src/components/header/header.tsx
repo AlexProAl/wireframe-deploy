@@ -1,31 +1,35 @@
-// import { cn } from '@/lib/utils'
-// interface IHeaderProps {
-//   className?: string
-// }
-// export const Header = ({ className = '' }: IHeaderProps) => {
-//   const styles = cn('mb-10 bg-gray-200 p-4', className)
-//   return (
-//     <header className={styles}>
-//       <div className="container">
-//         <div>HEADER</div>
-//       </div>
-//     </header>
-//   )
-// }
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import Modal from '@/components/modal/modal'
 
 interface IHeaderProps {
   className?: string
 }
 
 export const Header = ({ className = '' }: IHeaderProps) => {
+  const [open, setOpen] = useState(false)
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+
   const menuItems = [
     { label: 'О нас', href: '#pain-point' },
     { label: 'Решения', href: '#solution' },
     { label: 'Цены', href: '#pricing' },
   ]
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Имя:', name)
+    console.log('Телефон:', phone)
+    setName('')
+    setPhone('')
+    setOpen(false)
+    alert('Спасибо! Мы свяжемся с вами.')
+  }
 
   return (
     <header>
@@ -49,7 +53,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
             <Link
               key={idx}
               href={item.href}
-              className="font-medium text-gray-900 transition hover:text-blue-500"
+              className="text-gray-900 font-medium transition hover:text-blue-500"
             >
               {item.label}
             </Link>
@@ -57,15 +61,52 @@ export const Header = ({ className = '' }: IHeaderProps) => {
         </div>
 
         {/* Primary button */}
-        <a
-          href="https://elevatestd.lemonsqueezy.com/buy/5c5ea51e-9cf1-41d7-aa42-17c00cd1155d"
-          className="hover:bg-secondary bg-secondary relative rounded-full px-6 py-2 font-semibold text-white shadow-lg transition"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => setOpen(true)}
+          className="relative cursor-pointer rounded-full bg-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-blue-700"
         >
           Написать нам
-        </a>
+        </button>
       </nav>
+
+      {/* Модалка с формой */}
+      <Modal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+      >
+        <h2 className="mb-4 text-center text-2xl font-semibold">Свяжитесь с нами</h2>
+        <p className="text-gray-600 mb-6 text-center">
+          Оставьте свои контакты, и мы свяжемся с вами.
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4"
+        >
+          <input
+            type="text"
+            placeholder="Имя"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border-gray-300 rounded-lg border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Телефон"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="border-gray-300 rounded-lg border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <button
+            type="submit"
+            className="mt-2 cursor-pointer rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white transition hover:bg-blue-700"
+          >
+            Отправить
+          </button>
+        </form>
+      </Modal>
     </header>
   )
 }

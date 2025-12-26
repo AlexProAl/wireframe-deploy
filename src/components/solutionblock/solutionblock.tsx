@@ -31,10 +31,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section
-      id="solution"
-      className="bg-gray-50 py-20"
-    >
+    <section id="solution">
       <div className="container mx-auto px-4 text-center">
         <p className="text-sm uppercase text-blue-500">Solution</p>
         <h2 className="mt-2 text-3xl font-semibold md:text-4xl">A Template Built to Convert</h2>
