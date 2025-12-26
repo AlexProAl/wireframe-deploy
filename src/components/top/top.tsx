@@ -93,14 +93,16 @@ export default function HeroSection() {
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
         <h1
-          className={`max-w-[900px] text-4xl font-bold md:text-[60px] ${fadeUpClass(showHeading)}`}
+          className={`font-manrope max-w-[900px] text-4xl font-bold md:text-[60px] ${fadeUpClass(showHeading)}`}
         >
           Удобный сервис с которым легко <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
         </h1>
 
         {/* Subheading */}
-        <p className={`text-gray-700 max-w-xl text-lg md:text-xl ${fadeUpClass(showSubheading)}`}>
+        <p
+          className={`font-manrope text-gray-700 max-w-xl text-lg md:text-xl ${fadeUpClass(showSubheading)}`}
+        >
           Сквозная аналитика — объединяет данные из всех модулей и показывает полную картину
           бизнеса.
         </p>

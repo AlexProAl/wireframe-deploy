@@ -1,4 +1,4 @@
-import { Geist } from 'next/font/google'
+import { Geist, Manrope, Montserrat } from 'next/font/google'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
 import { GlobalModal } from '@/components/modal/global-modal'
@@ -9,6 +9,18 @@ import './globals.css'
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+})
+
+const manrope = Manrope({
+  variable: '--font-manrope',
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+})
+
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -23,7 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${manrope.variable} ${montserrat.variable} antialiased`}
+      >
         <ModalProvider>
           <Header />
 

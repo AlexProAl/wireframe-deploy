@@ -11,6 +11,11 @@ module.exports = {
         tertiary: 'var(--color-tertiary)',
         gray: 'var(--color-gray)',
       },
+      fontFamily: {
+        geist: ['var(--font-geist-sans)', 'sans-serif'],
+        manrope: ['var(--font-manrope)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
