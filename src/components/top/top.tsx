@@ -6,6 +6,10 @@ import { useModal } from '@/components/modal/modal-context'
 
 export default function HeroSection() {
   const { openModal } = useModal()
+  const [showHeading, setShowHeading] = useState(false)
+  const [showSubheading, setShowSubheading] = useState(false)
+  const [showButtons, setShowButtons] = useState(false)
+  const [showLogos, setShowLogos] = useState(false)
   const companies = [
     { src: '/images/company1.png', alt: 'FeatherDev', width: 134, height: 134 },
     { src: '/images/company2.png', alt: 'Acme Corp', width: 110, height: 110 },
@@ -58,8 +62,21 @@ export default function HeroSection() {
     return () => clearTimeout(timeout)
   }, [charIndex, isDeleting, wordIndex]) // убрали words из зависимостей
 
+  // === Последовательное появление элементов ===
+  useEffect(() => {
+    const timers: NodeJS.Timeout[] = []
+
+    timers.push(setTimeout(() => setShowHeading(true), 100))
+    timers.push(setTimeout(() => setShowSubheading(true), 400))
+    timers.push(setTimeout(() => setShowButtons(true), 700))
+    timers.push(setTimeout(() => setShowLogos(true), 1000))
+
+    return () => timers.forEach((t) => clearTimeout(t))
+  }, [])
+  const fadeUpClass = (show: boolean) =>
+    `transition-all duration-700 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`
   return (
-    <section className="relative flex h-screen w-full items-center justify-center">
+    <section className="relative flex w-full items-center justify-center pb-[96px] pt-[200px]">
       {/* Background pattern */}
       <div
         className="opacity-2 absolute inset-0 bg-[url('/pattern.svg')] bg-center bg-repeat"
@@ -75,19 +92,21 @@ export default function HeroSection() {
 
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
-        <h1 className="max-w-[900px] text-4xl font-bold md:text-[60px]">
+        <h1
+          className={`max-w-[900px] text-4xl font-bold md:text-[60px] ${fadeUpClass(showHeading)}`}
+        >
           Удобный сервис с которым легко <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-gray-700 max-w-xl text-lg md:text-xl">
+        <p className={`text-gray-700 max-w-xl text-lg md:text-xl ${fadeUpClass(showSubheading)}`}>
           Сквозная аналитика — объединяет данные из всех модулей и показывает полную картину
           бизнеса.
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+        <div className={`mt-6 flex flex-col gap-4 sm:flex-row ${fadeUpClass(showButtons)}`}>
           <button
             onClick={openModal}
             className="relative cursor-pointer rounded-full bg-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-blue-700"
@@ -103,7 +122,7 @@ export default function HeroSection() {
         </div>
 
         {/* Companies logos */}
-        <div className="relative min-h-[140px] overflow-hidden py-8">
+        <div className={`relative min-h-[140px] overflow-hidden py-8 ${fadeUpClass(showLogos)}`}>
           <div className="relative min-h-[140px] max-w-[800px] overflow-hidden">
             <div className="animate-marquee flex gap-6">
               {companies.concat(companies).map((company, idx) => (

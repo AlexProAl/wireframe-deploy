@@ -25,6 +25,7 @@ export const GlobalModal = () => {
       onClose={closeModal}
     >
       <h2 className="mb-4 text-center text-2xl font-semibold">Свяжитесь с нами</h2>
+      <p className="mb-4 text-center text-xl">Наш специалист свяжется с вами в ближайшее время</p>
       <form
         className="flex flex-col gap-4"
         onSubmit={handleSubmit}
