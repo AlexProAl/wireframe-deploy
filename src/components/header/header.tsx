@@ -33,7 +33,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
 
   return (
     <header>
-      <nav className="fixed left-0 right-0 top-4 z-50 mx-auto flex max-w-6xl items-center justify-between rounded-[200px] bg-white px-6 py-3 shadow-md">
+      <nav className="fixed left-0 right-0 top-4 z-50 mx-auto flex max-w-6xl max-w-[800px] items-center justify-between rounded-[200px] bg-white px-4 py-2 shadow-md">
         {/* Logo */}
         <Link
           href="#hero"
