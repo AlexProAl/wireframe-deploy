@@ -87,7 +87,7 @@ export default function HeroSection() {
         {/* Buttons */}
         <div className="mt-6 flex flex-col gap-4 sm:flex-row">
           <a
-            href="https://elevatestd.lemonsqueezy.com/buy/5c5ea51e-9cf1-41d7-aa42-17c00cd1155d"
+            href="www"
             className="hadow-[inset_0_0_4px_2px_rgba(255,255,255,0.28),_0_0_8px_1px_rgba(36,101,255,0.4)] rounded-full bg-primary px-6 py-3 font-semibold shadow-lg transition hover:bg-tertiary"
           >
             Написать нам
