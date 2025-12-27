@@ -12,15 +12,15 @@ export default function HeroSection() {
   const [showLogos, setShowLogos] = useState(false)
   const companies = [
     { src: '/images/company1.png', alt: 'FeatherDev', width: 134, height: 134 },
-    { src: '/images/company2.png', alt: 'Acme Corp', width: 110, height: 110 },
-    { src: '/images/company3.png', alt: 'Capsule', width: 107, height: 107 },
+    { src: '/images/globaldrive.png', alt: 'Globaldrive', width: 110, height: 110 },
+    { src: '/images/sharmax.png', alt: 'Sharmax', width: 107, height: 107 },
     { src: '/images/company4.png', alt: 'Segment', width: 132, height: 132 },
-    { src: '/images/company5.png', alt: 'Spherule', width: 133, height: 133 },
-    { src: '/images/company6.png', alt: 'Polymath', width: 100, height: 100 },
-    { src: '/images/company7.png', alt: 'Catalog', width: 97, height: 97 },
-    { src: '/images/company8.png', alt: 'FocalPoint', width: 117, height: 117 },
+    { src: '/images/reebok.png', alt: 'Spherule', width: 133, height: 133 },
+    { src: '/images/cocacola.png', alt: 'CocaCola', width: 100, height: 100 },
+    { src: '/images/company7.png', alt: 'Catalog', width: 100, height: 100 },
+    { src: '/images/mikatsu.png', alt: 'FocalPoint', width: 117, height: 117 },
     { src: '/images/company9.png', alt: 'Luminous', width: 119, height: 119 },
-    { src: '/images/company10.png', alt: 'Galileo', width: 118, height: 118 },
+    { src: '/images/oracle.png', alt: 'Galileo', width: 118, height: 118 },
     { src: '/images/company11.png', alt: 'Layers', width: 111, height: 111 },
   ]
 
@@ -124,7 +124,7 @@ export default function HeroSection() {
           className={`relative min-h-[140px] w-full overflow-hidden py-8 ${fadeUpClass(showLogos)}`}
         >
           <div className="relative mx-auto min-h-[140px] max-w-[800px] overflow-hidden">
-            <div className="animate-marquee flex gap-6">
+            <div className="animate-marquee flex items-center gap-6">
               {companies.concat(companies).map((company, idx) => (
                 <div
                   key={idx}
