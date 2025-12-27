@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { useModal } from '@/components/modal/modal-context'
+import { useModal } from '@/components/modal-window/modal-context'
 
 export default function HeroSection() {
   const { openModal } = useModal()

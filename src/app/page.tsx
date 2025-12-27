@@ -1,11 +1,12 @@
 // import { AboutUs } from '@/components/about-us/about-us'
 import { Faq } from '@/components/faq/faq'
-import Featureblock from '@/components/featureblock/featureblock'
-import Imageblock from '@/components/imageblock/imageblock'
-import Reviewsblock from '@/components/reviewsblock/reviewsblock'
-import Solutionblock from '@/components/solutionblock/solutionblock'
+import Featureblock from '@/components/feature-block/feature-block'
+import Imageblock from '@/components/image-block/image-block'
+import Priceblock from '@/components/price-block/price-block'
+import Reviewsblock from '@/components/reviews-block/reviews-block'
+import Solutionblock from '@/components/solution-block/solution-block'
 import Top from '@/components/top/top'
-import Videoblock from '@/components/videoblock/videoblock'
+import Videoblock from '@/components/video-block/video-block'
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Videoblock />
       <Reviewsblock />
       <Faq />
+      <Priceblock />
     </>
   )
 }

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { useModal } from '@/components/modal/modal-context'
-import Modal from './modal'
+import { useModal } from '@/components/modal-window/modal-context'
+import Modal from './modal-portal'
 
 export const GlobalModal = () => {
   const { open, closeModal } = useModal()

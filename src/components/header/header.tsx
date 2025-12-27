@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { useModal } from '@/components/modal/modal-context'
+import { useModal } from '@/components/modal-window/modal-context'
 
 interface IHeaderProps {
   className?: string

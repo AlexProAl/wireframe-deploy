@@ -1,8 +1,8 @@
 import { Geist, Manrope, Montserrat } from 'next/font/google'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
-import { GlobalModal } from '@/components/modal/global-modal'
-import { ModalProvider } from '@/components/modal/modal-context'
+import { GlobalModal } from '@/components/modal-window/global-modal'
+import { ModalProvider } from '@/components/modal-window/modal-context'
 import type { Metadata } from 'next'
 import './globals.css'
 
