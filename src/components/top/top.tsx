@@ -96,7 +96,7 @@ export default function HeroSection() {
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
         <h1
-          className={`font-manrope max-w-[900px] text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
+          className={`max-w-[900px] font-manrope text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
         >
           Удобный сервис с которым легко <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
@@ -104,7 +104,7 @@ export default function HeroSection() {
 
         {/* Subheading */}
         <p
-          className={`font-manrope text-gray-700 max-w-xl text-lg md:text-xl ${fadeUpClass(showSubheading)}`}
+          className={`text-gray-700 max-w-xl font-manrope text-lg md:text-xl ${fadeUpClass(showSubheading)}`}
         >
           Сквозная аналитика — объединяет данные из всех модулей и показывает полную картину
           бизнеса.
@@ -127,8 +127,10 @@ export default function HeroSection() {
         </div>
 
         {/* Companies logos */}
-        <div className={`relative min-h-[140px] overflow-hidden py-8 ${fadeUpClass(showLogos)}`}>
-          <div className="relative min-h-[140px] max-w-[800px] overflow-hidden">
+        <div
+          className={`relative min-h-[140px] w-full overflow-hidden py-8 ${fadeUpClass(showLogos)}`}
+        >
+          <div className="relative mx-auto min-h-[140px] max-w-[800px] overflow-hidden">
             <div className="animate-marquee flex gap-6">
               {companies.concat(companies).map((company, idx) => (
                 <div
