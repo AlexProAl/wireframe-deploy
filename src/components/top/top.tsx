@@ -15,7 +15,7 @@ export default function HeroSection() {
     { src: '/images/globaldrive.png', alt: 'Globaldrive', width: 110, height: 110 },
     { src: '/images/sharmax.png', alt: 'Sharmax', width: 107, height: 107 },
     { src: '/images/company4.png', alt: 'Segment', width: 132, height: 132 },
-    { src: '/images/reebok.png', alt: 'Spherule', width: 133, height: 133 },
+    { src: '/images/mango.png', alt: 'Mango', width: 133, height: 133 },
     { src: '/images/cocacola.png', alt: 'CocaCola', width: 100, height: 100 },
     { src: '/images/company7.png', alt: 'Catalog', width: 100, height: 100 },
     { src: '/images/mikatsu.png', alt: 'FocalPoint', width: 117, height: 117 },
