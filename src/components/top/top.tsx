@@ -17,11 +17,11 @@ export default function HeroSection() {
     { src: '/images/company4.png', alt: 'Segment', width: 132, height: 132 },
     { src: '/images/mango.png', alt: 'Mango', width: 133, height: 133 },
     { src: '/images/cocacola.png', alt: 'CocaCola', width: 100, height: 100 },
-    { src: '/images/company7.png', alt: 'Catalog', width: 100, height: 100 },
-    { src: '/images/mikatsu.png', alt: 'FocalPoint', width: 117, height: 117 },
+    { src: '/images/costco.png', alt: 'Costco', width: 100, height: 100 },
+    { src: '/images/mikatsu.png', alt: 'Mikatsu', width: 117, height: 117 },
     { src: '/images/company9.png', alt: 'Luminous', width: 119, height: 119 },
-    { src: '/images/oracle.png', alt: 'Galileo', width: 118, height: 118 },
-    { src: '/images/company11.png', alt: 'Layers', width: 111, height: 111 },
+    { src: '/images/oracle.png', alt: 'Oracle', width: 118, height: 118 },
+    { src: '/images/Five-Guys.png', alt: 'Five-Guys', width: 111, height: 111 },
   ]
 
   // Для заголовка с эффектом печати
