@@ -11,51 +11,39 @@ interface FeatureItem {
 const features: FeatureItem[] = [
   {
     icon: '/images/icons/feat1.png',
-    title: 'Multiple Managers',
+    title: 'Несколько менеджеров',
     description:
-      'Continue indulged speaking the was out horrible domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son',
+      'На одном тарифном плане вы можете активировать до 10ти аккаунтов для ваших сотрудников.',
     list: [
-      'Capture everything',
-      'Organize your to-do list by workflow',
-      'Always include a deadline',
+      'Работать в команде',
+      'Организовывать список задач по рабочим процессам',
+      'Всегда указывать срок выполнения',
     ],
-    link: '/services-details',
   },
   {
     icon: '/images/icons/feat2.png',
-    title: 'Customization',
+    title: 'Настройка под себя',
     description:
-      'Continue indulged speaking the was out horrible domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son',
+      'Вы можете настроить под себя интерфейс, активировать отображение нужных полей и многое другое.',
     list: [
-      'Organize your to-do list by workflow',
-      'Always include a deadline',
-      'Break big work into smaller tasks',
+      'Организовывать список задач по рабочим процессам',
+      'Выбрать наиболее удобрый визуальный вид',
+      'Разбивать большие задачи на мелкие',
     ],
-    link: '/services-details',
   },
   {
     icon: '/images/icons/feat3.png',
-    title: 'Extensions & Addons',
+    title: 'Расширения и дополнения',
     description:
-      'Continue indulged speaking the was out horrible domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son',
-    list: [
-      'Capture everything',
-      'Organize your to-do list by workflow',
-      'Always include a deadline',
-    ],
-    link: '/services-details',
+      'Вы можете воспользоваться нашими дополениями для СРМ, если того требуют ваши задачи.',
+    list: ['Легко расширить функционал', 'У каждого сотрудника свои дополнения', 'Удобно и легко!'],
   },
   {
     icon: '/images/icons/feat4.png',
-    title: 'Strong Encryption',
+    title: 'Надёжное шифрование',
     description:
-      'Continue indulged speaking the was out horrible domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son',
-    list: [
-      'Organize your to-do list by workflow',
-      'Always include a deadline',
-      'Break big work into smaller tasks',
-    ],
-    link: '/services-details',
+      'Наш сервис исполььзует сквозное шифрование, поэтому ваши данные под надежной защитой!',
+    list: ['Двухфакторная аутентификация', 'Сквозное шифрование', 'Безопасное хранение информации'],
   },
 ]
 
@@ -89,18 +77,7 @@ export default function FeatureTwoBlock() {
                 )}
               </div>
               <div className="content">
-                <h3 className="mb-2 text-xl font-semibold">
-                  {feature.link ? (
-                    <a
-                      href={feature.link}
-                      className="hover:underline"
-                    >
-                      {feature.title}
-                    </a>
-                  ) : (
-                    feature.title
-                  )}
-                </h3>
+                <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
                 <ul className="text-gray-600 mt-4 list-inside list-disc space-y-1">
                   {feature.list.map((item, i) => (
