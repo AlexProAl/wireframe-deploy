@@ -106,8 +106,7 @@ export default function HeroSection() {
         <p
           className={`text-gray-700 max-w-xl font-manrope text-lg md:text-xl ${fadeUpClass(showSubheading)}`}
         >
-          Сквозная аналитика — объединяет данные из всех модулей и показывает полную картину
-          бизнеса.
+          Все необходимое для управления и масштабирования бизнеса
         </p>
 
         {/* Buttons */}
