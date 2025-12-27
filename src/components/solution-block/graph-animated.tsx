@@ -22,8 +22,8 @@ export default function GraphAnimated({
   data,
   delay = 1000,
   repeatDelay = 3000,
-  title = 'Views',
-  subtitle = '24 hours',
+  title = 'Просмотр',
+  subtitle = '24 часа',
 }: GraphAnimatedProps) {
   const pathRef = useRef<SVGPathElement | null>(null)
 
@@ -69,7 +69,7 @@ export default function GraphAnimated({
           <h2 className="text-2xl font-bold">{title}</h2>
         </div>
         <div className="text-right">
-          <p className="text-gray-500 text-sm">vs last month</p>
+          <p className="text-gray-500 text-sm">по сравнению с прошлым месяцем</p>
           <h2 className="text-xl font-semibold">100k</h2>
         </div>
       </div>
@@ -99,10 +99,8 @@ export default function GraphAnimated({
       </div>
 
       <div className="text-gray-700 mt-2">
-        <h4 className="font-semibold">Data-Driven Decisions</h4>
-        <p className="text-sm">
-          Track performance metrics instantly to optimize content and strategy.
-        </p>
+        <h4 className="font-semibold">Данные за период</h4>
+        <p className="text-sm">Мгновенно отслеживайте показатели эффективности.</p>
       </div>
     </div>
   )

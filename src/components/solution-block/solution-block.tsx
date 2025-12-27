@@ -6,25 +6,24 @@ import GraphAnimated from './graph-animated'
 
 const features = [
   {
-    title: 'Write & Schedule with Ease',
-    description:
-      'Effortlessly create and organize content, perfect for blogs, landing pages, and more.',
+    title: 'Пишите и планируйте с лёгкостью',
+    description: 'Создавайте и организовывайте ваши цели изадачи легко.',
     image: '/images/solution/1.jpg',
   },
   {
-    title: 'Data-Driven Decisions',
-    description: 'Track performance metrics instantly to optimize content and strategy.',
+    title: 'Принятие решений на основе данных',
+    description:
+      'Отслеживайте показатели эффективности мгновенно, чтобы оптимизировать вашу стратегию.',
     image: '/images/solution/2.png',
   },
   {
-    title: 'Publish Anywhere',
-    description:
-      'Share content across multiple platforms like LinkedIn, your blog, or newsletters.',
+    title: 'Публикуйте цели персонально для отдельных команд',
+    description: 'Их будут видеть только члены тех команд, кому они адресованы.',
     image: '/images/solution/3.png',
   },
   {
-    title: 'Get Smarter Content Suggestions',
-    description: 'Leverage AI tools to get personalized recommendations for improving your site.',
+    title: 'Получаейте заявки в систему уже сегодня',
+    description: 'Быстрая синхронизация нашей системы с вашим бизнесом.',
     image: '/images/solution/4.png',
   },
 ]
@@ -33,10 +32,12 @@ export default function FeaturesSection() {
   return (
     <section id="solution">
       <div className="container mx-auto px-4 text-center">
-        <p className="text-sm uppercase text-blue-500">Solution</p>
-        <h2 className="mt-2 text-3xl font-semibold md:text-4xl">A Template Built to Convert</h2>
+        <p className="text-sm uppercase text-blue-500">Решения</p>
+        <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
+          Что дает использование нашей СРМ
+        </h2>
         <p className="text-gray-600 mx-auto mt-2 max-w-xl">
-          Designed to guide users through your key offerings while showcasing your product’s value.
+          Разработано чтобы дать пользователю удобную систему интеграции бизнеса.
         </p>
 
         {/* Сетка */}
@@ -57,7 +58,7 @@ export default function FeaturesSection() {
             </div>
 
             <div className="col-span-1 rounded-3xl bg-white p-6 shadow-md lg:col-span-2">
-              <h3 className="mb-4 text-2xl font-semibold">Performance Graph</h3>
+              <h3 className="mb-4 text-2xl font-semibold">График эффективности</h3>
               <GraphAnimated
                 data={[0, 50, 100, 75, 90, 60]}
                 width={1200}
