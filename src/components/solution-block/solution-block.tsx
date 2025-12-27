@@ -32,10 +32,7 @@ export default function FeaturesSection() {
   return (
     <section id="solution">
       <div className="container mx-auto px-4 text-center">
-        <p className="text-sm uppercase text-blue-500">Решения</p>
-        <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
-          Что дает использование нашей СРМ
-        </h2>
+        <h2 className="mt-2 text-3xl font-semibold md:text-4xl">Детальная BI аналитика</h2>
         <p className="text-gray-600 mx-auto mt-2 max-w-xl">
           Разработано чтобы дать пользователю удобную систему интеграции бизнеса.
         </p>

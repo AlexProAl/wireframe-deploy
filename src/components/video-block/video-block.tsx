@@ -9,12 +9,7 @@ const ScreenVideo: React.FC = () => {
   return (
     <section className="relative mx-auto w-full overflow-hidden py-24">
       {/* Заголовок */}
-      <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl">Презентация нашей системы</h2>
-      {/* Описание */}
-      <p className="font-manrope text-gray-700 mx-auto max-w-xl text-center text-lg md:text-xl">
-        Не только расскажем, но и покажем как устроена наша система. Как легко и просто вы можете
-        управлять и распределять входящую информацию
-      </p>
+      <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl">Видео о нас</h2>
       <div className="container relative h-[700px]">
         <iframe
           src={rutubeEmbedUrl}
