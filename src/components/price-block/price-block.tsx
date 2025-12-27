@@ -10,7 +10,7 @@ export default function PricingSection() {
         {/* Header */}
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block rounded-full bg-tertiary px-6 py-2 text-sm text-white">
-            Pricing
+            Цены
           </span>
 
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы для каждого</h2>
