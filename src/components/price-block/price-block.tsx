@@ -28,10 +28,10 @@ export default function PricingSection() {
             price="$29"
             period="/month"
             features={[
-              'Up to 10 Pages',
-              'Basic Customization Options',
-              'Core Analytics Tools',
-              'Email Support',
+              'До 10ти аккаутов',
+              'Базовые возможности настройки',
+              'Основные инструменты аналитики',
+              'Поддержка по электронной почте',
             ]}
             buttonText="Лайт тариф"
             cardClassName="bg-white text-secondary"
@@ -44,10 +44,10 @@ export default function PricingSection() {
             price="$79"
             period="/month"
             features={[
-              'Unlimited Pages',
-              'Full Customization & Branding',
-              'Advanced Analytics & A/B Testing',
-              'Priority Email Support',
+              'До 50ти аккаунтов',
+              'Полные возможности настроек',
+              'Продвинутая система аналитики',
+              'Приоритетная поддержка по электронной почте',
             ]}
             buttonText="Перейти на про"
             cardClassName="bg-tertiary text-white"
