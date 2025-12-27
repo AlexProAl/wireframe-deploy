@@ -13,7 +13,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
   const { openModal } = useModal()
 
   const menuItems = [
-    { label: 'О нас', href: '#pain-point' },
+    { label: 'О нас', href: '#about' },
     { label: 'Решения', href: '#solution' },
     { label: 'Цены', href: '#pricing' },
   ]

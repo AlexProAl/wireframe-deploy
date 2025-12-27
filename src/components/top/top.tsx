@@ -76,7 +76,10 @@ export default function HeroSection() {
   const fadeUpClass = (show: boolean) =>
     `transition-all duration-700 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`
   return (
-    <section className="relative flex w-full items-center justify-center pb-[96px] pt-[200px]">
+    <section
+      id="hero"
+      className="relative flex w-full items-center justify-center pb-[96px] pt-[200px]"
+    >
       {/* Background pattern */}
       <div
         className="opacity-2 absolute inset-0 bg-[url('/pattern.svg')] bg-center bg-repeat"
