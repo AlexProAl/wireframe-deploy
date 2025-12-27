@@ -93,7 +93,7 @@ export default function HeroSection() {
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
         <h1
-          className={`font-manrope max-w-[900px] text-4xl font-bold md:text-[60px] ${fadeUpClass(showHeading)}`}
+          className={`font-manrope max-w-[900px] text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
         >
           Удобный сервис с которым легко <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
@@ -111,7 +111,7 @@ export default function HeroSection() {
         <div className={`mt-6 flex flex-col gap-4 sm:flex-row ${fadeUpClass(showButtons)}`}>
           <button
             onClick={openModal}
-            className="relative cursor-pointer rounded-full bg-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-blue-700"
+            className="relative cursor-pointer rounded-full bg-tertiary px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-secondary"
           >
             Написать нам
           </button>

@@ -1,9 +1,11 @@
 // import { AboutUs } from '@/components/about-us/about-us'
+import { Faq } from '@/components/faq/faq'
 import Featureblock from '@/components/featureblock/featureblock'
 import Imageblock from '@/components/imageblock/imageblock'
+import Reviewsblock from '@/components/reviewsblock/reviewsblock'
 import Solutionblock from '@/components/solutionblock/solutionblock'
 import Top from '@/components/top/top'
-import { Feather } from 'lucide-react'
+import Videoblock from '@/components/videoblock/videoblock'
 
 export default function HomePage() {
   return (
@@ -12,7 +14,9 @@ export default function HomePage() {
       <Imageblock />
       <Featureblock />
       <Solutionblock />
-      {/* <AboutUs /> */}
+      <Videoblock />
+      <Reviewsblock />
+      <Faq />
     </>
   )
 }

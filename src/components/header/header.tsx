@@ -40,7 +40,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
             <Link
               key={idx}
               href={item.href}
-              className="text-gray-900 font-medium transition hover:text-blue-500"
+              className="font-medium text-secondary transition hover:text-tertiary"
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
         {/* Primary button */}
         <button
           onClick={openModal}
-          className="relative cursor-pointer rounded-full bg-blue-600 px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-blue-700"
+          className="relative cursor-pointer rounded-full bg-tertiary px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-secondary"
         >
           Написать нам
         </button>
