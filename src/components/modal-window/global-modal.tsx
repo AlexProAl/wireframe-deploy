@@ -35,7 +35,7 @@ export const GlobalModal = () => {
           placeholder="Имя"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border-gray-300 rounded-lg border px-4 py-2"
+          className="border-gray-300 rounded-full border px-4 py-2"
           required
         />
         <input
@@ -43,12 +43,12 @@ export const GlobalModal = () => {
           placeholder="Телефон"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="border-gray-300 rounded-lg border px-4 py-2"
+          className="border-gray-300 rounded-full border px-4 py-2"
           required
         />
         <button
           type="submit"
-          className="rounded-lg bg-tertiary px-4 py-2 text-white hover:bg-secondary"
+          className="rounded-full bg-tertiary px-4 py-2 text-white hover:bg-secondary"
         >
           Отправить
         </button>
