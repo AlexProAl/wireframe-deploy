@@ -116,14 +116,8 @@ export default function HeroSection() {
             onClick={openModal}
             className="relative cursor-pointer rounded-full bg-tertiary px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-secondary"
           >
-            Написать нам
+            Начать сейчас
           </button>
-          <a
-            href="#solution"
-            className="border-gray-300 hover:bg-gray-100 rounded-full border bg-white px-6 py-3 font-semibold transition"
-          >
-            Наши решения
-          </a>
         </div>
 
         {/* Companies logos */}

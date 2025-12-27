@@ -52,7 +52,7 @@ export const Header = ({ className = '' }: IHeaderProps) => {
           onClick={openModal}
           className="relative cursor-pointer rounded-full bg-tertiary px-6 py-2 font-semibold text-white shadow-lg transition hover:bg-secondary"
         >
-          Написать нам
+          Начать сейчас
         </button>
       </nav>
     </header>
