@@ -13,9 +13,11 @@ export default function PricingSection() {
             Pricing
           </span>
 
-          <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Simple Plans for Every Need</h2>
+          <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы для каждого</h2>
 
-          <p className="text-gray-500">Start small or go all-in — there’s a plan for you.</p>
+          <p className="text-gray-500">
+            Начните с тарифа лайт чтобы окунуться в атмосферу удобства.
+          </p>
         </div>
 
         {/* Cards */}
