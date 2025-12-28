@@ -55,7 +55,7 @@ export default function PricingCard({
             key={item}
             className="flex items-center gap-2"
           >
-            <CheckIcon className={isDark ? 'text-white' : 'text-gray-700'} />
+            <CheckIcon />
             <span>{item}</span>
           </li>
         ))}
