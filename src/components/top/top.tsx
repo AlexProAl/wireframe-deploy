@@ -102,9 +102,10 @@ export default function HeroSection() {
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
         <h1
-          className={`min-h-[120px] max-w-[900px] font-manrope text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
+          className={`min-h-[200px] max-w-[900px] font-manrope text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
         >
-          Одна система для: <span className="text-primary">{currentWord}</span>
+          Одна система для:
+          <br /> <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
         </h1>
 
