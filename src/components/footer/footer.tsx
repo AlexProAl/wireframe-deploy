@@ -5,9 +5,9 @@ import Link from 'next/link'
 
 export const Footer = () => {
   const menuItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Solution', href: '#solution' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'О нас', href: '#about' },
+    { label: 'Ренения', href: '#solution' },
+    { label: 'Цены', href: '#pricing' },
   ]
 
   const socials = [
@@ -85,7 +85,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener"
         >
-          Template by Elevate Studio
+          Аналичитечкий сервис ORYXBMS
         </Link>
       </div>
     </footer>
