@@ -26,7 +26,7 @@ export const Footer = () => {
         {/* Top: Logo */}
         <div className="mb-6 flex flex-col items-center justify-between md:flex-row">
           <div className="mb-4 flex flex-col items-start gap-0 md:mb-0">
-            <div className="relative h-12 w-28">
+            <div className="relative mx-auto h-12 w-28 md:mx-0">
               <Image
                 src="/logonew.png"
                 alt="Logo"
@@ -40,7 +40,7 @@ export const Footer = () => {
           </div>
 
           {/* Menu */}
-          <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-6">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -53,7 +53,7 @@ export const Footer = () => {
           </div>
 
           {/* Social icons */}
-          <div className="flex gap-4">
+          <div className="mt-4 flex gap-4 md:mt-0">
             {socials.map((item, idx) => (
               <a
                 key={idx}
