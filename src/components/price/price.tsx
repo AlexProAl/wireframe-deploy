@@ -1,4 +1,4 @@
-import PricingCard from '@/components/price-block/price-card'
+import PricingCard from '@/components/price/price-card'
 
 export default function PricingSection() {
   return (
@@ -6,7 +6,7 @@ export default function PricingSection() {
       id="pricing"
       className="py-20"
     >
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="container">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы</h2>

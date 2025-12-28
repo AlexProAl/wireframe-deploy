@@ -40,7 +40,7 @@ export const Footer = () => {
           </div>
 
           {/* Menu */}
-          <div className="mb-4 flex flex-col items-center justify-center gap-6 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
