@@ -31,7 +31,13 @@ export default function HeroSection() {
   const [charIndex, setCharIndex] = useState(0)
 
   useEffect(() => {
-    const words = ['ORYX.CRM', 'ORYX.TASK', 'ORYX.HRM', 'ORYX.PIM', 'ORYX.BI'] // нужные слова
+    const words = [
+      'Взаимоотношения с клиентами',
+      'Управления задачами',
+      'Найма/управления сотрудниками',
+      'Управления товарами',
+      'BI Аналитика',
+    ] // нужные слова
     const speed = isDeleting ? 250 : 350
     const pauseAfterTyping = 1000
     const pauseAfterDeleting = 500
@@ -98,7 +104,7 @@ export default function HeroSection() {
         <h1
           className={`min-h-[120px] max-w-[900px] font-manrope text-4xl font-bold text-secondary md:text-[60px] ${fadeUpClass(showHeading)}`}
         >
-          Удобный сервис с которым легко <span className="text-primary">{currentWord}</span>
+          Одна система для: <span className="text-primary">{currentWord}</span>
           <span className="blinking-cursor">|</span>
         </h1>
 

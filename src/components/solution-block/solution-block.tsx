@@ -30,7 +30,7 @@ const features: Feature[] = [
     row: 'top',
   },
   {
-    title: 'Принятие решений на основе данных',
+    title: 'Вывод данных на диа',
     description:
       'Отслеживайте показатели эффективности мгновенно, чтобы оптимизировать вашу стратегию.',
     image: '/images/solution/2.png',
@@ -44,8 +44,8 @@ const features: Feature[] = [
     description: 'Их будут видеть только члены тех команд, кому они адресованы.',
     image: '/images/solution/3.png',
     chartType: 'pie',
-    chartData: [30, 70, 20],
-    chartColors: ['#2469FE', '#F87171', '#34D399'],
+    chartData: [30, 70, 20, 10],
+    chartColors: ['#2469FE', '#F87171', '#34D399', '#FBBF24'],
     row: 'bottom',
   },
   {
