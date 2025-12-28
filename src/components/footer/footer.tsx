@@ -11,7 +11,7 @@ export const Footer = () => {
   ]
 
   const socials = [
-    { label: 'VK', href: '', icon: '/images/social/vk.png', size: 24 },
+    { label: 'VK', href: '#', icon: '/images/social/vk.png', size: 24 },
     {
       label: 'Telegram',
       href: '#',
@@ -45,7 +45,7 @@ export const Footer = () => {
               <Link
                 key={idx}
                 href={item.href}
-                className="text-gray-800 font-medium transition hover:text-blue-500"
+                className="text-gray-800 font-medium transition hover:text-tertiary"
               >
                 {item.label}
               </Link>

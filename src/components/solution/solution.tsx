@@ -181,7 +181,7 @@ export default function FeaturesSection() {
   return (
     <section
       id="solution"
-      className="pt-20"
+      className="pt-40"
     >
       <div className="container mx-auto px-4 text-center">
         <h2 className="mt-2 text-3xl font-semibold md:text-4xl">Детальная BI аналитика</h2>

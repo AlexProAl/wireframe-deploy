@@ -7,7 +7,7 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="relative pt-20"
+      className="relative pt-40"
     >
       <div className="container">
         <div className="max-w-fill relative mx-auto rounded-[32px] bg-tertiary px-6 py-20 text-center shadow-md">

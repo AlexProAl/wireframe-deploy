@@ -4,7 +4,7 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="pt-20"
+      className="pt-40"
     >
       <div className="container xl:max-w-[900px]">
         {/* Header */}
