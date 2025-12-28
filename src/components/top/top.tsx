@@ -102,7 +102,7 @@ export default function HeroSection() {
       <div className="container relative mx-auto flex flex-col items-center gap-8 px-4 text-center">
         {/* Heading с эффектом печати */}
         <h1
-          className={`min-h-[130px] max-w-[900px] font-manrope text-[30px] font-bold text-secondary md:min-h-[200px] md:text-[60px] md:leading-[1.1] lg:min-h-[220px] ${fadeUpClass(showHeading)}`}
+          className={`min-h-[135px] max-w-[900px] font-manrope text-[30px] font-bold text-secondary md:min-h-[200px] md:text-[60px] md:leading-[1.1] lg:min-h-[220px] ${fadeUpClass(showHeading)}`}
         >
           Одна система для:
           <br /> <span className="text-primary">{currentWord}</span>
