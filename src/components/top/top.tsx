@@ -38,7 +38,7 @@ export default function HeroSection() {
       'Управления товарами',
       'BI Аналитики',
     ] // нужные слова
-    const speed = isDeleting ? 20 : 50
+    const speed = isDeleting ? 40 : 100
     const pauseAfterTyping = 1000
     const pauseAfterDeleting = 200
 
