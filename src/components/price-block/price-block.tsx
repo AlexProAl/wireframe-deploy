@@ -9,15 +9,9 @@ export default function PricingSection() {
       <div className="mx-auto max-w-6xl px-4">
         {/* Header */}
         <div className="mb-16 text-center">
-          <span className="mb-4 inline-block rounded-full bg-tertiary px-6 py-2 text-sm text-white">
-            Цены
-          </span>
+          <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы</h2>
 
-          <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы для каждого</h2>
-
-          <p className="text-gray-500">
-            Начните с тарифа лайт чтобы окунуться в атмосферу удобства.
-          </p>
+          <p className="text-gray-500">для любого размера бизнеса</p>
         </div>
 
         {/* Cards */}
@@ -25,8 +19,8 @@ export default function PricingSection() {
           <PricingCard
             title="Тариф лайт"
             description="Подходит для небольших команд и старта"
-            price="$29"
-            period="/month"
+            price="3000₽"
+            period="/ в месяц"
             features={[
               'До 10ти аккаутов',
               'Базовые возможности настройки',
@@ -41,8 +35,8 @@ export default function PricingSection() {
           <PricingCard
             title="Тариф Про"
             description="Для команд, которым нужен максимум возможностей"
-            price="$79"
-            period="/month"
+            price="9000₽"
+            period="/ в месяц"
             features={[
               'До 50ти аккаунтов',
               'Полные возможности настроек',

@@ -1,5 +1,7 @@
-import Link from 'next/link'
+'use client'
+
 import { CheckIcon } from 'lucide-react'
+import { useModal } from '../modal-window/modal-context'
 
 type PricingCardProps = {
   title: string
@@ -24,6 +26,8 @@ export default function PricingCard({
   cardClassName,
   buttonClassName,
 }: PricingCardProps) {
+  const { openModal } = useModal()
+
   const isDark = variant === 'dark'
 
   const cardBase = 'rounded-2xl p-8 shadow-md transition-colors'
@@ -57,14 +61,14 @@ export default function PricingCard({
         ))}
       </ul>
 
-      <Link
-        href="#"
-        className={`block rounded-full py-3 text-center font-medium transition ${
+      <button
+        onClick={openModal}
+        className={`block w-full cursor-pointer rounded-full py-3 text-center font-medium transition ${
           buttonClassName ?? buttonVariant
         }`}
       >
         {buttonText}
-      </Link>
+      </button>
     </div>
   )
 }
