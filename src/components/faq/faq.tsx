@@ -12,7 +12,7 @@ interface IFaqProps {
 
 export const Faq = ({ className = '' }: IFaqProps) => {
   return (
-    <section className={cn('py-24', className)}>
+    <section className={cn('pt-20', className)}>
       <div className="container">
         {/* Header */}
         <div className="mb-16 text-center">

@@ -4,9 +4,9 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="py-20"
+      className="pt-20"
     >
-      <div className="container">
+      <div className="container xl:max-w-[900px]">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы</h2>

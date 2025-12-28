@@ -21,7 +21,7 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className="mt-16 rounded-3xl bg-white p-8 shadow-lg">
+    <footer className="mt-20 rounded-3xl bg-white p-8 shadow-lg">
       <div className="container">
         {/* Top: Logo */}
         <div className="mb-6 flex flex-col items-center justify-between md:flex-row">

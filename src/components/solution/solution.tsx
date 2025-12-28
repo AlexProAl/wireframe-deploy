@@ -179,7 +179,10 @@ export default function FeaturesSection() {
   const bottomFeatures = features.filter((f) => f.row === 'bottom')
 
   return (
-    <section id="solution">
+    <section
+      id="solution"
+      className="pt-20"
+    >
       <div className="container mx-auto px-4 text-center">
         <h2 className="mt-2 text-3xl font-semibold md:text-4xl">Детальная BI аналитика</h2>
         <p className="text-gray-600 mx-auto mt-2 max-w-xl">
