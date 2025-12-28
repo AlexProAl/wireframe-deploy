@@ -11,17 +11,11 @@ export const Footer = () => {
   ]
 
   const socials = [
-    { label: 'X', href: 'https://x.com/framer', icon: '/social-x.png', size: 24 },
+    { label: 'VK', href: '', icon: '/images/social/vk.png', size: 24 },
     {
-      label: 'Instagram',
-      href: 'https://www.instagram.com/framer/',
-      icon: '/social-ig.png',
-      size: 24,
-    },
-    {
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/company/framer/posts/?feedView=all',
-      icon: '/social-linkedin.png',
+      label: 'Telegram',
+      href: '#',
+      icon: '/images/social/tg.webp',
       size: 24,
     },
   ]
@@ -45,7 +39,7 @@ export const Footer = () => {
         </div>
 
         {/* Social icons */}
-        {/* <div className="flex gap-4">
+        <div className="flex gap-4">
           {socials.map((item, idx) => (
             <a
               key={idx}
@@ -62,7 +56,7 @@ export const Footer = () => {
               />
             </a>
           ))}
-        </div> */}
+        </div>
       </div>
 
       {/* Menu */}
@@ -79,15 +73,7 @@ export const Footer = () => {
       </div>
 
       {/* Meta */}
-      <div className="text-gray-400 text-center text-sm">
-        <Link
-          href="https://elevatestudio.design/"
-          target="_blank"
-          rel="noopener"
-        >
-          Аналичитечкий сервис ORYXBMS
-        </Link>
-      </div>
+      <div className="text-gray-400 text-center text-sm">Аналичитечкий сервис ORYXBMS</div>
     </footer>
   )
 }

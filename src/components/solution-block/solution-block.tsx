@@ -12,12 +12,20 @@ interface Feature {
   chartData?: number[]
   chartColors?: string[]
   row: 'top' | 'bottom'
+  list?: string[]
 }
 
 const features: Feature[] = [
   {
-    title: 'Пишите и планируйте с лёгкостью',
-    description: 'Создавайте и организовывайте ваши цели и задачи легко.',
+    title:
+      'Сквозная аналитика — объединяет данные из всех модулей и показывает полную картину бизнеса',
+    description: 'Шаблоны отчётов — готовые отчёты по ключевым показателям без ручной настройки',
+    list: [
+      'Отчёты по CRM — анализ воронки, продаж и эффективности менеджеров',
+      'Отчёты по TASK — контроль задач, сроков и загрузки команд',
+      'Отчёты по HRM — аналитика по персоналу, KPI и занятости сотрудников',
+      'Отчёты по PIM — анализ ассортимента, цен и качества продуктовых данных',
+    ],
     image: '/images/solution/1.jpg',
     row: 'top',
   },
@@ -185,16 +193,23 @@ export default function FeaturesSection() {
               key={index}
               className="col-span-1 flex flex-col items-center rounded-3xl bg-white p-6 shadow-md"
             >
-              <div className="relative mb-4 h-32 w-32">
+              {/* <div className="relative mb-4 h-32 w-32">
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   fill
                   className="rounded-full object-cover"
                 />
-              </div>
-              <h4 className="text-center text-xl font-semibold">{feature.title}</h4>
-              <p className="text-gray-600 mt-2 text-center">{feature.description}</p>
+              </div> */}
+              <h4 className="text-left text-xl font-semibold">{feature.title}</h4>
+              <p className="text-gray-600 mt-2 text-left">{feature.description}</p>
+              {feature.list && (
+                <ul className="text-gray-600 mt-4 list-inside list-disc text-left text-sm">
+                  {feature.list.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
 
