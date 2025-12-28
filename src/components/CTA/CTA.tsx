@@ -13,14 +13,15 @@ export default function CTASection() {
         <div className="max-w-fill relative mx-auto rounded-[32px] bg-tertiary px-6 py-20 text-center shadow-md">
           {/* Title */}
           <h2 className="font-manrope text-[32px] font-bold leading-[1.1] text-white md:text-[56px] md:leading-[1.05]">
-            Start Building Your SaaS
+            Начните с нами
             <br />
-            Success Today
+            Уже сегодня
           </h2>
 
           {/* Description */}
           <p className="mx-auto mt-6 max-w-xl text-base text-white/80 md:text-lg">
-            Take your SaaS from zero to hero with our flexible and conversion-focused template.
+            Запустите свой проект вместе снами и пользуйтесь современыми инструментами аналитики
+            прямо сейчас
           </p>
 
           {/* Button */}

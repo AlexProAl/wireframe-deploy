@@ -38,7 +38,7 @@ export default function ProductImage({ alt = '' }: ProductImageProps) {
           className="relative overflow-hidden rounded-[32px] shadow-[0_12px_24px_4px_#2667ff1f]"
         >
           <Image
-            src="/scalenew.png"
+            src="/product-image.png"
             alt={alt}
             width={1200}
             height={800}
