@@ -23,10 +23,10 @@ export const Footer = () => {
   return (
     <footer className="mt-20 rounded-3xl bg-white p-8 shadow-lg">
       <div className="container">
-        {/* Top: Logo */}
-        <div className="mb-6 flex flex-col items-center justify-between md:flex-row">
-          <div className="mb-4 flex flex-col items-start gap-0 md:mb-0">
-            <div className="relative mx-auto h-12 w-28 md:mx-0">
+        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-3">
+          {/* Left: Logo */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="relative h-12 w-28">
               <Image
                 src="/logonew.png"
                 alt="Logo"
@@ -34,13 +34,13 @@ export const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-500 text-sm">
-              @{new Date().getFullYear()} ORYXBMS. Все права защищены.
+            <p className="text-gray-500 mt-1 text-sm">
+              ©{new Date().getFullYear()} ORYXBMS. Все права защищены.
             </p>
           </div>
 
-          {/* Menu */}
-          <div className="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-6">
+          {/* Center: Menu */}
+          <div className="flex justify-center gap-6">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -52,8 +52,8 @@ export const Footer = () => {
             ))}
           </div>
 
-          {/* Social icons */}
-          <div className="mt-4 flex gap-4 md:mt-0">
+          {/* Right: Socials */}
+          <div className="flex justify-center gap-4 md:justify-end">
             {socials.map((item, idx) => (
               <a
                 key={idx}
