@@ -6,7 +6,7 @@ export default function PricingSection() {
       id="pricing"
       className="pt-40"
     >
-      <div className="container xl:max-w-[900px]">
+      <div className="container xl:max-w-[800px]">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">Тарифные планы</h2>
@@ -15,7 +15,7 @@ export default function PricingSection() {
         </div>
 
         {/* Cards */}
-        <div className="mx-auto max-w-full xl:max-w-[900px]">
+        <div className="mx-auto max-w-full xl:max-w-[800px]">
           <div className="grid gap-8 md:grid-cols-2">
             <PricingCard
               title="Тариф лайт"
