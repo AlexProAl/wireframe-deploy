@@ -56,7 +56,7 @@ export default function FeatureTwoBlock() {
   return (
     <section
       id="about"
-      className="feature-style-two-area overflow-hidden pt-40"
+      className="feature-style-two-area pt-40"
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
