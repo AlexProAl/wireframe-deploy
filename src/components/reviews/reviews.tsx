@@ -50,7 +50,7 @@ const ReviewsSection: React.FC = () => {
       style={{ backgroundColor: bgColor }}
     >
       <div className="container">
-        <div className="mb-24 text-center">
+        <div className="mb-20 text-center">
           <h2 className="mb-6 mt-6 text-4xl font-bold md:text-6xl">Что говорят наши клиенты</h2>
           <p className="text-gray-700 mx-auto max-w-2xl text-xl">
             Реальные отзывы компаний, которые уже используют нашу систему
