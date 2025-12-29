@@ -13,7 +13,7 @@ export default function HeroSection() {
   const companies = [
     { src: '/images/company1.png', alt: 'FeatherDev', width: 134, height: 134 },
     { src: '/images/globaldrive.png', alt: 'Globaldrive', width: 110, height: 110 },
-    { src: '/images/sharmax.png', alt: 'Sharmax', width: 107, height: 107 },
+    { src: '/images/sharmax.png', alt: 'Sharmax', width: 137, height: 137 },
     { src: '/images/company4.png', alt: 'Segment', width: 132, height: 132 },
     { src: '/images/mango.png', alt: 'Mango', width: 133, height: 133 },
     { src: '/images/cocacola.png', alt: 'CocaCola', width: 100, height: 100 },

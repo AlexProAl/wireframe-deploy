@@ -1,8 +1,9 @@
 'use client'
 
 import { JSX } from 'react'
-import Image from 'next/image'
-import GraphAnimated from './graph-animated'
+import dynamic from 'next/dynamic'
+
+const GraphAnimated = dynamic(() => import('./graph-animated'), { ssr: false })
 
 interface Feature {
   title: string
@@ -72,107 +73,110 @@ interface MiniChartProps {
   donutWidth?: number // толщина "кольца" для donut
 }
 
-function MiniChart({ type, data, colors, donutWidth = 8 }: MiniChartProps) {
-  if (type === 'pie' || type === 'donut') {
-    const total = data.reduce((a, b) => a + b, 0)
-    const radius = 16
-    const center = radius
-    const paths: JSX.Element[] = []
-    let startAngle = 0
+const MiniChart = dynamic(
+  async () => ({
+    default: function MiniChart({ type, data, colors, donutWidth = 8 }: MiniChartProps) {
+      if (type === 'pie' || type === 'donut') {
+        const total = data.reduce((a, b) => a + b, 0)
+        const radius = 16
+        const center = radius
+        const paths: JSX.Element[] = []
+        let startAngle = 0
 
-    data.forEach((value, i) => {
-      const angle = (value / total) * 2 * Math.PI
-      const x1 = center + radius * Math.cos(startAngle)
-      const y1 = center + radius * Math.sin(startAngle)
-      const x2 = center + radius * Math.cos(startAngle + angle)
-      const y2 = center + radius * Math.sin(startAngle + angle)
-      const largeArcFlag = angle > Math.PI ? 1 : 0
+        data.forEach((value, i) => {
+          const angle = (value / total) * 2 * Math.PI
+          const x1 = center + radius * Math.cos(startAngle)
+          const y1 = center + radius * Math.sin(startAngle)
+          const x2 = center + radius * Math.cos(startAngle + angle)
+          const y2 = center + radius * Math.sin(startAngle + angle)
+          const largeArcFlag = angle > Math.PI ? 1 : 0
 
-      if (type === 'pie') {
-        // обычный круглый pie
-        paths.push(
-          <path
-            key={i}
-            d={`
-              M ${center} ${center}
-              L ${x1} ${y1}
-              A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}
-              Z
-            `}
-            fill={colors?.[i] || '#647bef'}
-          />,
-        )
-      } else {
-        // donut
-        const innerRadius = radius - donutWidth
-        const x1Inner = center + innerRadius * Math.cos(startAngle)
-        const y1Inner = center + innerRadius * Math.sin(startAngle)
-        const x2Inner = center + innerRadius * Math.cos(startAngle + angle)
-        const y2Inner = center + innerRadius * Math.sin(startAngle + angle)
+          if (type === 'pie') {
+            paths.push(
+              <path
+                key={i}
+                d={`
+                  M ${center} ${center}
+                  L ${x1} ${y1}
+                  A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}
+                  Z
+                `}
+                fill={colors?.[i] || '#647bef'}
+              />,
+            )
+          } else {
+            const innerRadius = radius - donutWidth
+            const x1Inner = center + innerRadius * Math.cos(startAngle)
+            const y1Inner = center + innerRadius * Math.sin(startAngle)
+            const x2Inner = center + innerRadius * Math.cos(startAngle + angle)
+            const y2Inner = center + innerRadius * Math.sin(startAngle + angle)
 
-        paths.push(
-          <path
-            key={i}
-            d={`
-              M ${x1} ${y1}
-              A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}
-              L ${x2Inner} ${y2Inner}
-              A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${x1Inner} ${y1Inner}
-              Z
-            `}
-            fill={colors?.[i] || '#647bef'}
-          />,
+            paths.push(
+              <path
+                key={i}
+                d={`
+                  M ${x1} ${y1}
+                  A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}
+                  L ${x2Inner} ${y2Inner}
+                  A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${x1Inner} ${y1Inner}
+                  Z
+                `}
+                fill={colors?.[i] || '#647bef'}
+              />,
+            )
+          }
+
+          startAngle += angle
+        })
+
+        return (
+          <div className="mt-4 h-32 w-32">
+            <svg
+              viewBox={`0 0 ${radius * 2} ${radius * 2}`}
+              className="h-full w-full"
+            >
+              {paths}
+            </svg>
+          </div>
         )
       }
 
-      startAngle += angle
-    })
+      if (type === 'bar') {
+        const max = Math.max(...data)
+        return (
+          <div className="mt-4 flex h-24 w-full items-end justify-between gap-1">
+            {data.map((value, i) => (
+              <div
+                key={i}
+                className="rounded-sm"
+                style={{
+                  height: `${(value / max) * 100}%`,
+                  width: `${100 / data.length - 5}%`,
+                  backgroundColor: colors?.[i] || '#34D399',
+                }}
+              />
+            ))}
+          </div>
+        )
+      }
 
-    return (
-      <div className="mt-4 h-32 w-32">
-        <svg
-          viewBox={`0 0 ${radius * 2} ${radius * 2}`}
-          className="h-full w-full"
-        >
-          {paths}
-        </svg>
-      </div>
-    )
-  }
-
-  if (type === 'bar') {
-    const max = Math.max(...data)
-    return (
-      <div className="mt-4 flex h-24 w-full items-end justify-between gap-1">
-        {data.map((value, i) => (
-          <div
-            key={i}
-            className="rounded-sm"
-            style={{
-              height: `${(value / max) * 100}%`,
-              width: `${100 / data.length - 5}%`,
-              backgroundColor: colors?.[i] || '#34D399', // цвет по массиву или зелёный по умолчанию
-            }}
+      // default: линейный график
+      return (
+        <div className="mt-4 h-20 w-full">
+          <GraphAnimated
+            data={data}
+            width={300}
+            height={80}
+            strokeColor="#647bef"
+            strokeWidth={3}
+            repeatDelay={2000}
           />
-        ))}
-      </div>
-    )
-  }
-
-  // default: линейный график
-  return (
-    <div className="mt-4 h-20 w-full">
-      <GraphAnimated
-        data={data}
-        width={300}
-        height={80}
-        strokeColor="#647bef"
-        strokeWidth={3}
-        repeatDelay={2000}
-      />
-    </div>
-  )
-}
+        </div>
+      )
+    },
+  }),
+  { ssr: false }, // 🔹 отключаем SSR
+)
 
 export default function FeaturesSection() {
   const topFeatures = features.filter((f) => f.row === 'top')
