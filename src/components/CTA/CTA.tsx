@@ -10,7 +10,7 @@ export default function CTASection() {
       className="relative pt-40"
     >
       <div className="container">
-        <div className="max-w-fill relative mx-auto rounded-[32px] bg-tertiary px-6 py-20 text-center shadow-md">
+        <div className="max-w-fill relative mx-auto rounded-[32px] bg-tertiary px-6 py-20 text-center shadow-md xl:max-w-[1000px]">
           {/* Title */}
           <h2 className="font-manrope text-[32px] font-bold leading-[1.1] text-white md:text-[56px] md:leading-[1.05]">
             Начните с нами
@@ -20,8 +20,7 @@ export default function CTASection() {
 
           {/* Description */}
           <p className="mx-auto mt-6 max-w-xl text-base text-white/80 md:text-lg">
-            Запустите свой проект вместе снами и пользуйтесь современыми инструментами аналитики
-            прямо сейчас
+            Запустите свой проект вместе с нами
           </p>
 
           {/* Button */}
