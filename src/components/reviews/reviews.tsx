@@ -56,8 +56,24 @@ const ReviewsSection: React.FC = () => {
             Реальные отзывы компаний, которые уже используют нашу систему
           </p>
         </div>
+        {/* MOBILE: одна колонка, без анимации */}
+        <div className="mx-auto max-w-xl space-y-10 md:hidden">
+          {reviews.map((review) => (
+            <div
+              key={`mobile-${review.id}`}
+              className="rounded-3xl bg-white p-8 ring-1 ring-black/5"
+            >
+              <p className="text-gray-700 mb-6 text-lg">{review.text}</p>
 
-        <div className="relative mx-auto h-[800px] max-w-7xl">
+              <div className="border-t pt-4">
+                <div className="font-bold">{review.name}</div>
+                <div className="text-gray-600">{review.role}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="relative mx-auto hidden h-[800px] max-w-7xl md:block">
           <div className="grid h-full grid-cols-1 gap-24 md:grid-cols-2">
             {/* Левая колонка - ДВИЖЕТСЯ ВНИЗ */}
             <div className="relative h-full">
@@ -70,16 +86,11 @@ const ReviewsSection: React.FC = () => {
                     'linear-gradient(180deg, transparent 0%, black 8%, black 92%, transparent 100%)',
                 }}
               >
-                <div
-                  className="space-y-10"
-                  style={{
-                    animation: 'scrollDown 40s linear infinite',
-                  }}
-                >
+                <div className="space-y-10 md:[animation:scrollDown_40s_linear_infinite]">
                   {[...reviews, ...reviews, ...reviews].map((review, index) => (
                     <div
                       key={`left-${review.id}-${index}`}
-                      className="hover:shadow-3xl rounded-3xl bg-white p-10 shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+                      className="rounded-3xl bg-white p-10 ring-1 ring-black/5 transition-transform duration-500 hover:scale-[1.02]"
                     >
                       <div className="mb-6 flex items-start justify-between">
                         <div className="text-gray-200 text-4xl"></div>
@@ -126,16 +137,11 @@ const ReviewsSection: React.FC = () => {
                     'linear-gradient(180deg, transparent 0%, black 8%, black 92%, transparent 100%)',
                 }}
               >
-                <div
-                  className="space-y-10"
-                  style={{
-                    animation: 'scrollUp 45s linear infinite',
-                  }}
-                >
+                <div className="space-y-10 md:[animation:scrollUp_40s_linear_infinite]">
                   {[...reviews, ...reviews, ...reviews].map((review, index) => (
                     <div
                       key={`right-${review.id}-${index}`}
-                      className="hover:shadow-3xl rounded-3xl bg-white p-10 shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+                      className="rounded-3xl bg-white p-10 ring-1 ring-black/5 transition-transform duration-500 hover:scale-[1.02]"
                     >
                       <div className="mb-6 flex items-start justify-between">
                         <div className="text-gray-200 text-4xl"></div>
