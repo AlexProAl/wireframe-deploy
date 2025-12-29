@@ -36,7 +36,7 @@ const features: Feature[] = [
     image: '/images/solution/2.png',
     chartType: 'donut',
     chartData: [30, 50, 70, 40, 60],
-    chartColors: ['#2469FE', '#F87171', '#34D399', '#FBBF24', '#8B5CF6'],
+    chartColors: ['#647bef', '#F87171', '#34D399', '#FBBF24', '#8B5CF6'],
     row: 'bottom',
   },
   {
@@ -45,7 +45,7 @@ const features: Feature[] = [
     image: '/images/solution/3.png',
     chartType: 'pie',
     chartData: [30, 40, 20, 10],
-    chartColors: ['#2469FE', '#F87171', '#34D399', '#FBBF24'],
+    chartColors: ['#647bef', '#F87171', '#34D399', '#FBBF24'],
     row: 'bottom',
   },
   {
@@ -99,7 +99,7 @@ function MiniChart({ type, data, colors, donutWidth = 8 }: MiniChartProps) {
               A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}
               Z
             `}
-            fill={colors?.[i] || '#2469FE'}
+            fill={colors?.[i] || '#647bef'}
           />,
         )
       } else {
@@ -120,7 +120,7 @@ function MiniChart({ type, data, colors, donutWidth = 8 }: MiniChartProps) {
               A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${x1Inner} ${y1Inner}
               Z
             `}
-            fill={colors?.[i] || '#2469FE'}
+            fill={colors?.[i] || '#647bef'}
           />,
         )
       }
@@ -166,7 +166,7 @@ function MiniChart({ type, data, colors, donutWidth = 8 }: MiniChartProps) {
         data={data}
         width={300}
         height={80}
-        strokeColor="#2469FE"
+        strokeColor="#647bef"
         strokeWidth={3}
         repeatDelay={2000}
       />
@@ -196,14 +196,6 @@ export default function FeaturesSection() {
               key={index}
               className="col-span-1 flex flex-col items-center rounded-3xl bg-white p-6 shadow-md"
             >
-              {/* <div className="relative mb-4 h-32 w-32">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div> */}
               <h4 className="text-left text-xl font-semibold">{feature.title}</h4>
               <p className="text-gray-600 mt-2 text-left">{feature.description}</p>
               {feature.list && (
@@ -220,10 +212,10 @@ export default function FeaturesSection() {
           <div className="col-span-1 rounded-3xl bg-white p-6 shadow-md lg:col-span-2">
             <h3 className="mb-4 text-2xl font-semibold">График эффективности</h3>
             <GraphAnimated
-              data={[0, 50, 100, 75, 90, 60]}
+              data={[0, 50, 100, 75, 90, 60, 90]}
               width={1200}
               height={200}
-              strokeColor="#2469FE"
+              strokeColor="#647bef"
               strokeWidth={4}
               repeatDelay={2000}
             />
@@ -237,14 +229,6 @@ export default function FeaturesSection() {
               key={index}
               className="col-span-1 flex flex-col items-center justify-between rounded-3xl bg-white p-6 shadow-md"
             >
-              {/* <div className="relative mb-4 h-32 w-32">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div> */}
               <div>
                 <h4 className="text-center text-xl font-semibold">{feature.title}</h4>
                 <p className="text-gray-600 mt-2 text-center">{feature.description}</p>

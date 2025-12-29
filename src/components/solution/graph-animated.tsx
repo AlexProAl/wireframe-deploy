@@ -17,7 +17,7 @@ interface GraphAnimatedProps {
 export default function GraphAnimated({
   width = 600,
   height = 200,
-  strokeColor = '#2469FE',
+  strokeColor = '#647bef',
   strokeWidth = 6, // толще
   data,
   delay = 1000,
